@@ -1,0 +1,23 @@
+[project]
+name = "hap_ft"
+version = "0.0.1"
+
+[tool.black]
+line-length=120
+target-version=['py312']
+required-version='24'
+
+[tool.mypy]  
+python_version = '3.12'
+disallow_untyped_defs = true
+exclude = ["venv/", "etc/", "build/"]
+
+[tool.isort]
+profile = "black"
+line_length = 120
+
+[tool.coverage.run]
+source = ['hap_ft']
+
+[tool.coverage.report]
+show_missing = true
